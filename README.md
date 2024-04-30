@@ -18,4 +18,8 @@ The Administrator Module equips airline staff with powerful tools to efficiently
 1. Flight Schedule Management (Add/Modify): Oversee and update flight schedules with accuracy and timeliness.
 2. View Booked Ticket Statistics: Gain valuable insights into booking trends, seat occupancy rates, and revenue generation for informed decision-making.
 
+PayPal Sandbox Login:
+
+Access the PayPal Sandbox login page by following this link: [PayPal Sandbox Login](https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications). Here, you can create both personal and business accounts tailored for testing payment functionalities when booking tickets. For a comprehensive guide on creating and using PayPal Sandbox accounts, you may refer to instructional resources available on platforms like YouTube.
+
 This repository serves as a central hub for collaboration and development on the Airline Booking System. Whether you're a developer contributing code enhancements or an airline stakeholder interested in the system's capabilities, we invite you to explore, contribute, and innovate together. Let's elevate the travel experience for passengers and streamline operations for airlines worldwide.
