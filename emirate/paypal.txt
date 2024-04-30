@@ -1,0 +1,6 @@
+//bussiness account
+sb-jp6th29126277_api1.business.example.com
+GRJCRVJSRDB3LVZE
+//personal account
+sb-cvurr29772165@personal.example.com
+nWx;H8!e

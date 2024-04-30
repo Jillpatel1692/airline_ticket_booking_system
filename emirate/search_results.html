@@ -1,0 +1,276 @@
+
+<!-- search_flights.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        .navbar {
+            background-color: black !important; /* Set navbar background color to indigo */
+        }
+          footer {
+        background-color: rgb(32, 78, 178);
+        color: white;
+        padding: 20px 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .footer-section {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .footer-section h5 {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-section p {
+        margin: 5px 0;
+    }
+
+    .footer-section img {
+        margin-right: 5px;
+        width: 30px; /* Adjust as needed */
+    }
+    </style>
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Welcome to Indigo Airline</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dashboard.php">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="search_results.html">Search Flight</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="booked_flight.php">Booked Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br><br><br>
+    <div class="container">
+        <div class="row justify-content-center mt-15">
+            <div class="col-md-15">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center text-dark">Search Flights</h2>
+
+        <!-- <h2>Search Flights</h2> -->
+        <form action="search_results.php" method="get">
+            <div class="form-group">
+                <label for="from_city">From City:</label>
+                <select id="from_city" name="from_city" class="form-control">
+               
+            <option value="IN-AN">Andaman and Nicobar Islands</option>
+            <option value="IN-AP">Andhra Pradesh</option>
+            <option value="IN-AR">Arunachal Pradesh</option>
+            <option value="IN-AS">Assam</option>
+            <option value="IN-BR">Bihar</option>
+            <option value="IN-CH">Chandigarh</option>
+            <option value="IN-CT">Chhattisgarh</option>
+            <option value="IN-DN">Dadra and Nagar Haveli and Daman and Diu</option>
+            <option value="IN-DL">Delhi</option>
+            <option value="IN-GA">Goa</option>
+            <option value="IN-GJ">Gujarat</option>
+            <option value="IN-HR">Haryana</option>
+            <option value="IN-HP">Himachal Pradesh</option>
+            <option value="IN-JH">Jharkhand</option>
+            <option value="IN-KA">Karnataka</option>
+            <option value="IN-KL">Kerala</option>
+            <option value="IN-LA">Ladakh</option>
+            <option value="IN-LD">Lakshadweep</option>
+            <option value="IN-MH">Maharashtra</option>
+            <option value="IN-MN">Manipur</option>
+            <option value="IN-ML">Meghalaya</option>
+            <option value="IN-MZ">Mizoram</option>
+            <option value="IN-NL">Nagaland</option>
+            <option value="IN-OR">Odisha</option>
+            <option value="IN-PB">Punjab</option>
+            <option value="IN-PY">Puducherry</option>
+            <option value="IN-RJ">Rajasthan</option>
+            <option value="IN-SK">Sikkim</option>
+            <option value="IN-TN">Tamil Nadu</option>
+            <option value="IN-TR">Tripura</option>
+            <option value="IN-UP">Uttar Pradesh</option>
+            <option value="IN-UT">Uttarakhand</option>
+            <option value="IN-WB">West Bengal</option>
+        
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to_city">To City:</label>
+                <select id="to_city" name="to_city" class="form-control">
+               
+            <option value="IN-AN">Andaman and Nicobar Islands</option>
+            <option value="IN-AP">Andhra Pradesh</option>
+            <option value="IN-AR">Arunachal Pradesh</option>
+            <option value="IN-AS">Assam</option>
+            <option value="IN-BR">Bihar</option>
+            <option value="IN-CH">Chandigarh</option>
+            <option value="IN-CT">Chhattisgarh</option>
+            <option value="IN-DN">Dadra and Nagar Haveli and Daman and Diu</option>
+            <option value="IN-DL">Delhi</option>
+            <option value="IN-GA">Goa</option>
+            <option value="IN-GJ">Gujarat</option>
+            <option value="IN-HR">Haryana</option>
+            <option value="IN-HP">Himachal Pradesh</option>
+            <option value="IN-JH">Jharkhand</option>
+            <option value="IN-KA">Karnataka</option>
+            <option value="IN-KL">Kerala</option>
+            <option value="IN-LA">Ladakh</option>
+            <option value="IN-LD">Lakshadweep</option>
+            <option value="IN-MH">Maharashtra</option>
+            <option value="IN-MN">Manipur</option>
+            <option value="IN-ML">Meghalaya</option>
+            <option value="IN-MZ">Mizoram</option>
+            <option value="IN-NL">Nagaland</option>
+            <option value="IN-OR">Odisha</option>
+            <option value="IN-PB">Punjab</option>
+            <option value="IN-PY">Puducherry</option>
+            <option value="IN-RJ">Rajasthan</option>
+            <option value="IN-SK">Sikkim</option>
+            <option value="IN-TN">Tamil Nadu</option>
+            <option value="IN-TR">Tripura</option>
+            <option value="IN-UP">Uttar Pradesh</option>
+            <option value="IN-UT">Uttarakhand</option>
+            <option value="IN-WB">West Bengal</option>
+        
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="seat_type">Seat Type:</label>
+                <select id="seat_type" name="seat_type" class="form-control">
+                    <option value="Economic">Economic</option>
+                    <option value="Business">Business</option>
+                    <option value="First Class">First Class</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Search Flights</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+<br><br><br>
+    <footer>
+        <div class="container">
+          <div class="footer-section">
+            <h5>About Us</h5>
+            <ul>
+              <li><a href="#">Get to Know Us</a></li>
+              <li><a href="#">InfoGrafiken – CSR Initiatives</a></li>
+              <li><a href="#">Board of Directors</a></li>
+              <li><a href="#">Leadership Team</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">RWJPD – Equal Opportunity Employer</a></li>
+              <li><a href="#">GVM Awards</a></li>
+              <li><a href="#">HAWTs workplace policy</a></li>
+              <li><a href="#">Get Nutri-Fit Information</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#">Plan B</a></li>
+              <li><a href="#">Medical Assistance</a></li>
+              <li><a href="#">Special Mobility Assistance</a></li>
+              <li><a href="#">Seat Selec</a></li>
+              <li><a href="#">Baggage</a></li>
+              <li><a href="#">Add-ons & Services</a></li>
+              <li><a href="#">Group Bookings</a></li>
+              <li><a href="#">Refund Claim</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#">Offer Center</a></li>
+              <li><a href="#">Advertisement with us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Blogs and Blogs</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cancellations / Change</a></li>
+              <li><a href="#">Internacional Dialer Tips</a></li>
+              <li><a href="#">Tele-check-in</a></li>
+              <li><a href="#">Purchase Requirements</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Connect</h5>
+            <p>24/7 Customer Support</p>
+            <a href="tel:+71234567819">+71 234567819</a>
+            <h5>Download</h5>
+            <a href="#"><img src="google-play-badge.png" alt="Google Play"></a>
+            <a href="#"><img src="app-store-badge.png" alt="App Store"></a>
+            <h5>Our Awards</h5>
+            <p>Best Airline - Cost Effectiveness - <em>Global</em></p>
+          </div>
+          <div class="footer-section">
+            <h5>Social</h5>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </footer>
+      
+      
+</body>
+</html>
